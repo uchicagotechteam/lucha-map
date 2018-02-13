@@ -114,13 +114,9 @@
               <i class='glyphicon glyphicon-repeat'></i>
               Reset
             </a>
-            
-            <div style="height:200px; width:400px; overflow-y: auto;">
-            	<pre>
- 			 		<div id='results_list' style="width:400px; word-wrap: break-word;"></div>
-				</pre>
-			</div>
-
+            <p class='pull-right'>
+              <a class='btn btn-default' id='viewmode'><i class='fa fa-list'></i> List view</a>
+            </p>
           </div>
           <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
         </div>
@@ -132,9 +128,20 @@
             </div>
           </noscript>
           <div id='map_canvas'></div>
-          <p class='pull-right'>
-            <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> by <a href='http://derekeder.com'>Derek Eder</a>.
-        </p>
+          <div id='listview' style='display: none;'>
+            <h2>LUCHA Health Resources</h2>
+            <table class='table'>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Contact</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody id='results_list'></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -188,6 +195,20 @@
             myMap.reset(); 
             return false;
           });
+
+          $('#viewmode').click(function(){
+            if ($('#map_canvas').is(":visible")){
+              $('#viewmode').html("<i class='fa fa-map-marker'></i> Map view");
+              $('#listview').show();
+              $('#map_canvas').hide();
+          }
+
+          else {
+            $('#viewmode').html("<i class='fa fa-list'></i> List view");
+            $('#map_canvas').show();
+              $('#listview').hide();
+          } 
+           });
           
           $(":text").keydown(function(e){
               var key =  e.keyCode ? e.keyCode : e.which;
@@ -196,6 +217,7 @@
                   return false;
               }
           });
+
         });
       //]]>
     </script>

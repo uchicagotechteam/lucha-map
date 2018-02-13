@@ -336,31 +336,36 @@
       results.append("<li><span class='lead'>No results found</span></li>");
     }
     else {
-      for (var row in data) {
-        template = "\
-          <div class='row-fluid item-list'>\
-            <div class='span12'>\
-              <strong>" + data[row][0] + "</strong>\
-              <br />\
-              " + data[row][1] + "\
-              <br />\
-              " + data[row][2] + "\
-              <br />\
-              " + data[row][3] + "\
-              <br />\
-              " + data[row][4] + "\
-              <br />\
-              " + data[row][5] + "\
-              <br />\
-              " + data[row][6] + "\
-            </div>\
-          </div>";
-        results.append(template);
-      }
-    }
-    results.fadeIn();
-  },
+                for (var row in data) {
+                {
+                   var type_color = 'red';
+                if (data[row][1] == "Parks and Green Space") type_color = 'green';
+                if (data[row][1] == "Fresh and Healthy Food") type_color = 'blue';
+                if (data[row][1] == "Hospitals and Health Clinics") type_color = 'purple';
+                if (data[row][1] == "Other Social Services" ) type_color = 'yellow'; 
+                if (data[row][1] == "Community Gardens") type_color = 'orange';
+                }
 
+                template = "\
+                  <tr>\
+                      <td><span class='filter-box filter-" + type_color + "'></span></td>\
+                      <td><strong>" + data[row][0] + "</strong><br /></td>\
+                      <td>";
+                        if (data[row][3] != "") 
+                            template += "<b>Phone:</b> " + data[row][3] + "<br>";
+                        if (data[row][6] != "") 
+                            template += "<b>Web:</b> <a href='http://" + data[row][6] + "' target='_blank'>" + data[row][6] + "</a><br>";
+                        if (data[row][2] != "") 
+                            template += "<b>Address:</b> <a href='mailto:" + data[row][2] + "' target='_blank'>" + data[row][2] + "</a><br>";
+                        template += "\
+                      </td>\
+                      <td>" + data[row][4] + "</td>\
+                  </tr>";
+                results.append(template);
+            }
+        }
+        results.fadeIn();
+    }
 
     MapsLib.prototype.addCommas = function (nStr) {
         nStr += '';
