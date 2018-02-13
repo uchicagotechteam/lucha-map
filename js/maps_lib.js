@@ -171,6 +171,7 @@
         if ( $("#cbType3").is(':checked')) tempWhereClause.push("Community Gardens");
         if ( $("#cbType4").is(':checked')) tempWhereClause.push("Hospitals and Health Clinics");
         if ( $("#cbType5").is(':checked')) tempWhereClause.push("Other Social Services");
+        if ( $("#cbType6").is(':checked')) tempWhereClause.push("Parks and Green Space");
         self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
 
