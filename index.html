@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang='en'>
   <head>
@@ -113,6 +114,13 @@
               <i class='glyphicon glyphicon-repeat'></i>
               Reset
             </a>
+            
+            <div style="height:200px; width:400px; overflow-y: auto;">
+            	<pre>
+ 			 		<div id='results_list' style="width:400px; word-wrap: break-word;"></div>
+				</pre>
+			</div>
+
           </div>
           <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
         </div>
@@ -154,13 +162,11 @@
             locationScope:      "chicago",
             defaultZoom:        13
           });
-
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
       
           $(':checkbox').click(function(){
             myMap.doSearch();
           });
-
           $(':radio').click(function(){
             myMap.doSearch();
           });
