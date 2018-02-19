@@ -356,7 +356,7 @@
                         if (data[row][6] != "") 
                             template += "<b>Web:</b> <a href='http://" + data[row][6] + "' target='_blank'>" + data[row][6] + "</a><br>";
                         if (data[row][2] != "") 
-                            template += "<b>Address:</b> <a href='mailto:" + data[row][2] + "' target='_blank'>" + data[row][2] + "</a><br>";
+                            template += "<b>Address:</b> " + data[row][2] + "<br>";
                         template += "\
                       </td>\
                       <td>" + data[row][4] + "</td>\
