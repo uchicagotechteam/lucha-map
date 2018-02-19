@@ -169,10 +169,10 @@
         var tempWhereClause = [];
         if ( $("#cbType1").is(':checked')) tempWhereClause.push("Fitness");
         if ( $("#cbType2").is(':checked')) tempWhereClause.push("Community Gardens");
-        if ( $("#cbType3").is(':checked')) tempWhereClause.push("Other Social Services");
+        if ( $("#cbType3").is(':checked')) tempWhereClause.push("Hospitals and Health Clinics");
         if ( $("#cbType4").is(':checked')) tempWhereClause.push("Parks and Green Space");
         if ( $("#cbType5").is(':checked')) tempWhereClause.push("Fresh and Healthy Food");
-        if ( $("#cbType6").is(':checked')) tempWhereClause.push("Hospitals and Health Clinics");
+        if ( $("#cbType6").is(':checked')) tempWhereClause.push("Other Social Services");
         self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
 
