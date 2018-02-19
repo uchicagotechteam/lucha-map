@@ -72,6 +72,7 @@
         $("#result_box").hide();
 
         //-----custom initializers-----
+        $("#text_search").val("");
         //-----end of custom initializers-----
 
         //run the default search when page loads
@@ -175,6 +176,12 @@
         if ( $("#cbType6").is(':checked')) tempWhereClause.push("Parks and Green Space");
         self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
+
+        //-----text search-----
+        var text_search = $("#text_search").val().replace("'", "\\'");
+        if (text_search != '')
+          self.whereClause += " AND 'name' contains ignoring case '" + text_search + "'";
+        //-----end of text search-----
 
         self.getgeoCondition(address, function (geoCondition) {
             self.whereClause += geoCondition;
