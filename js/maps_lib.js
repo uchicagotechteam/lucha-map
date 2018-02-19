@@ -341,8 +341,8 @@
                    var type_color = 'red';
                 if (data[row][1] == "Parks and Green Space") type_color = 'green';
                 if (data[row][1] == "Fresh and Healthy Food") type_color = 'blue';
-                if (data[row][1] == "Hospitals and Health Clinics") type_color = 'purple';
-                if (data[row][1] == "Other Social Services" ) type_color = 'yellow'; 
+                if (data[row][1] == "Hospitals and Health Clinics") type_color = 'yellow';
+                if (data[row][1] == "Other Social Services" ) type_color = 'purple'; 
                 if (data[row][1] == "Community Gardens") type_color = 'orange';
                 }
 
