@@ -180,7 +180,7 @@
         //-----text search-----
         var text_search = $("#text_search").val().replace("'", "\\'");
         if (text_search != '')
-          self.whereClause += " AND 'Description' contains ignoring case '" + text_search + "'";
+          self.whereClause += " AND 'All Text' contains ignoring case '" + text_search + "'";
         //-----end of text search-----
 
         self.getgeoCondition(address, function (geoCondition) {
