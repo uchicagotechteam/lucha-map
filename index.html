@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.min.css"/>
   </head>
   <body>
-    <div class='navbar navbar-default navbar-static-top'>
+<!--     <div class='navbar navbar-default navbar-static-top'>
       <div class='container-fluid'>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,22 +32,24 @@
             <li class='active'><a href="index.html">Map</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+        </div><!/.nav-collapse -->
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-md-4'>
           <div class='well'>
             <h4>
-              Address <small>(<a id='find_me' href='#'>find me</a>)</small>
+            <font color='white'>
+              Address <small>(<a id='find_me' color=#2469BC href='#'>find me</a>)</small>
+            </font>
             </h4>
             <p>
               <input class='form-control' id='search_address' placeholder='Enter an address or an intersection' type='text' />
             </p>            
             <p>
               <label>
+              <font color='white'>
                 within
+              </font>
                 <select id='search_radius'>
                   <option value='400'>2 blocks</option>
                   <option value='805'>1/2 mile</option>
@@ -58,55 +60,71 @@
             </p>
 
             <h4>
+            <font color='white'>
               Search by Keyword
+            </font>  
             </h4>
             <input class='form-control' id='text_search' placeholder="Enter a keyword to search" type='text' />
 
             <br />
             <h4>
+            <font color='white'>
             Filter by Categories
+            </font>
             </h4>
               <ul class='inputs-list unstyled'>
                 <li>
                  <label class='checkbox inline'>
                  <input type='checkbox' id='cbType1' />
                  <span class='filter-box filter-red'></span>
+                 <font color='white'>
                   Fitness
+              	 </font>
                  </label>
                 </li>
                 <li>
                  <label class='checkbox inline'>
                  <input type='checkbox' id='cbType2' />
                  <span class='filter-box filter-orange'></span>
+                 <font color='white'>
                  Community Gardens
+                 </font>
                  </label>
                 </li>
                 <li>
                  <label class='checkbox inline'>
                  <input type='checkbox' id='cbType3' />
                  <span class='filter-box filter-yellow'></span>
+                 <font color='white'>
                   Hospitals and Health Clinics
+                 </font>
                  </label>
                 </li>
                 <li>
                  <label class='checkbox inline'>
                  <input type='checkbox' id='cbType4' />
                  <span class='filter-box filter-green'></span>
+                 <font color='white'>
                  Parks and Green Space
+                 </font>
                  </label>
                 </li>
                 <li>
                  <label class='checkbox inline'>
                  <input type='checkbox' id='cbType5' />
                  <span class='filter-box filter-blue'></span>
+                 <font color='white'>
                   Fresh and Healthy Food
+                 </font>
                  </label>
                 </li>
                 <li>
                  <label class='checkbox inline'>
                  <input type='checkbox' id='cbType6' />
                  <span class='filter-box filter-purple'></span>
+                 <font color='white'>
                    Other Social Services
+                 </font>
                  </label>
                 </li>
               <br>
